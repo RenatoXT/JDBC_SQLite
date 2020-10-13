@@ -53,7 +53,21 @@ public class App {
                     };
                     break;
                 case 3:
+                    try{
+                        System.out.println("Album id: ");
+                        albumId = Integer.parseInt(scanner.nextLine().trim());
 
+                        System.out.println("Album title: ");
+                        albumTitle = scanner.nextLine().trim();
+
+                        System.out.println("Album artist id: ");
+                        artistId = Integer.parseInt(scanner.nextLine().trim());
+
+                        DbConnect.update(albumId, albumTitle, artistId);;
+
+                    } catch (Exception error) {
+                        System.out.println("Invalid input");
+                    };
                     break;
                 case 4:
                     DbConnect.select();
