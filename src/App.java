@@ -42,7 +42,15 @@ public class App {
                     };
                     break;
                 case 2:
+                    try{
+                        System.out.println("Album id: ");
+                        albumId = Integer.parseInt(scanner.nextLine().trim());
 
+                        DbConnect.delete(albumId);
+
+                    } catch (Exception error) {
+                        System.out.println("Invalid input");
+                    };
                     break;
                 case 3:
 
